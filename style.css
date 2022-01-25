@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.7;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.bg-dark {
+    background-color: rgb(33, 71, 55);
+}
+
+.flex,
+.flex_centered {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex_centered {
+    flex-direction: column;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding-right: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: initial;
+}
+
+
+/* li {
+    
+} */
