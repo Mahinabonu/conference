@@ -171,13 +171,19 @@ h3 a:hover {
 
 .flex_info {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .intro {
     display: flex;
     flex-direction: column;
     margin-right: 30px;
+}
+
+.intro h3,
+.intro p {
+    font-weight: 300;
+    line-height: 1.4;
 }
 
 .last {
@@ -193,8 +199,8 @@ h3 a:hover {
 /* FOOTER */
 
 .footer .flex {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     align-items: center;
 }
 
