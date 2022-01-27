@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
 :root {
-    --dark: rgb(33, 49, 68);
-    --light: rgb(192, 192, 207);
-    --middle: rgb(29, 87, 73);
+    --dark: #293f50;
+    --light: #888;
+    --middle: #648880;
+    --white: #fff;
 }
 
 *,
@@ -19,7 +20,7 @@ body {
 
 .container {
     padding-top: 30px;
-    width: 1000px;
+    width: 960px;
     margin: 0 auto;
     padding: 0 auto;
 }
@@ -35,8 +36,9 @@ body {
 }
 
 .flex,
-.flex_centered {
-    padding: 40px 20px;
+.flex_centered,
+.flex_info {
+    padding: 40px 30px;
     display: flex;
     height: 100%;
     align-items: center;
@@ -55,18 +57,17 @@ body {
 
 /* nav & ul/li */
 
-.nav,
-nav ul {
-    margin-top: 20px;
-    text-align: right;
-}
-
 ul {
-    padding-top: 30px;
+    padding-top: 15px;
     display: flex;
     gap: 10px;
     list-style-type: none;
     font-weight: 400;
+}
+
+.nav h2 {
+    font-size: 20px;
+    text-align: right;
 }
 
 
@@ -74,24 +75,40 @@ ul {
 
 h1 {
     font-weight: 100;
-    font-size: 50px;
-    color: var(--light);
+    font-size: 44px;
+    color: var(--white);
     line-height: .9;
 }
 
 h2 {
     color: var(--middle);
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 300;
     padding-bottom: 10px;
+}
+
+h3,
+h5 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: var(--light);
+    font-weight: 400;
+}
+
+h5 {
+    color: var(--middle);
 }
 
 .text {
     font-size: 25px;
     font-weight: 300;
     text-align: center;
-    color: var(--light);
+    color: var(--white);
     line-height: 40px;
+}
+
+p {
+    color: var(--light);
 }
 
 .title {
@@ -106,7 +123,7 @@ h2 {
     background-color: var(--middle);
     position: absolute;
     left: 0;
-    top: -60%;
+    top: -40px;
 }
 
 
@@ -114,29 +131,75 @@ h2 {
 
 a:link,
 a:visited {
-    color: var(--light);
+    color: var(--white);
     text-decoration: none;
 }
 
 a:hover,
-.title h1:hover {
+.title h1:hover,
+h3 a,
+h3 a:visited {
     color: var(--middle);
+}
+
+h3 a:hover {
+    color: var(--light);
 }
 
 
 /* button */
 
-.button {
+.button a {
+    display: inline-block;
     background-color: var(--dark);
-    color: var(--light);
-    border: 1px solid var(--light);
+    color: var(--white);
+    border: 1px solid var(--white);
     padding: 25px;
     margin: 20px;
     border-radius: 5px;
+    font-weight: 400;
+    letter-spacing: .5px;
 }
 
-.button:hover,
 .button a:hover {
-    background-color: var(--light);
+    background-color: var(--white);
     color: var(--middle);
+}
+
+
+/* SPEAKERS */
+
+.flex_info {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.last {
+    margin-right: 0px;
+}
+
+.img {
+    height: 170px;
+    border-radius: 10px;
+}
+
+
+/* FOOTER */
+
+.footer .flex {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+.footer li {
+    margin-top: -20px;
+    font-weight: 300;
+    font-size: 15px;
 }
