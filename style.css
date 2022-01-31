@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 :root {
     --dark: #293f50;
     --light: #888;
     --middle: #648880;
     --white: #fff;
+    --light_green: #a1d3b0;
+    --yellow: #f6f1d3;
 }
 
 *,
@@ -18,7 +20,8 @@ body {
     font-family: "Lato", sans-serif;
 }
 
-.container {
+.container,
+.container_small {
     padding-top: 30px;
     width: 960px;
     margin: 0 auto;
@@ -126,6 +129,10 @@ p {
     top: -40px;
 }
 
+.bold {
+    font-weight: 400;
+}
+
 
 /* LINKS  */
 
@@ -174,7 +181,8 @@ h3 a:hover {
     margin-bottom: 30px;
 }
 
-.intro {
+.intro,
+.intro_sp {
     display: flex;
     flex-direction: column;
     margin-right: 30px;
@@ -193,6 +201,74 @@ h3 a:hover {
 .img {
     height: 170px;
     border-radius: 10px;
+}
+
+
+/* SPEAKERS */
+
+.intro_sp {
+    background-image: linear-gradient(to right, var(--light_green), var(--yellow));
+    margin-right: 0;
+}
+
+.intro_sp p {
+    color: var(--light);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+/* INTRODUCTION  */
+
+.container_small {
+    display: flex;
+    width: 528px;
+}
+
+.introduction img {
+    margin-left: 50px;
+    width: 130px;
+    border-radius: 50%;
+}
+
+.introduction .flex {
+    padding-top: 0;
+}
+
+aside {
+    width: 30%;
+    margin-top: -150px;
+    padding-left: 25px;
+    margin-left: 25px;
+    float: right;
+}
+
+.speaker {
+    position: relative;
+}
+
+.speaker::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 170px;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: -1;
+}
+
+aside ul {
+    display: grid;
+    text-align: center;
+}
+
+.introduction a,
+aside a,
+aside a:visited {
+    color: var(--middle);
 }
 
 
