@@ -322,7 +322,8 @@ aside a:visited {
 
 /* fonts */
 
-.container_grid h3 {
+.container_grid h3,
+.propose h2 {
     color: var(--middle);
     font-size: 24px
 }
@@ -364,6 +365,42 @@ aside a:visited {
 .register_grid {
     display: grid;
     grid-template-columns: 60% 40%;
+}
+
+.propose h2,
+.propose h4,
+form h4 {
+    color: var(--middle);
+    padding-top: 20px;
+}
+
+.propose ul {
+    padding-left: 15px;
+    color: var(--light);
+    display: grid;
+    list-style-type: square;
+}
+
+form {
+    margin-left: 20px;
+    margin-bottom: 22px;
+    padding-right: 20px;
+    background-color: violet;
+}
+
+.input_form,
+.text_form {
+    width: 100%;
+    border: 1px solid #c6c9cc;
+    border-radius: 5px;
+    color: #888;
+    display: block;
+    padding: 5px 8px;
+}
+
+.select_form {
+    width: 60px;
+    height: 34px;
 }
 
 

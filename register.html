@@ -41,12 +41,11 @@
     <div class="container">
         <div class="register_grid">
             <div class="propose">
-                <h4>Purchase a Conference Pass</h4>
+                <h2>Purchase a Conference Pass</h2>
                 <p>TJS 100 PER PASS </p> <br>
                 <p>Purchase your Styles Conference pass using the form to the right. Multiple passes may be purchased within the same order, so feel free to bring a friend or two along. Once your order is finished we’ll follow up and provide a receipt for
                     your purchase. See you soon!</p>
-                <h5>Why Attend?
-                </h5>
+                <h4>Why Attend? </h4>
                 <ul>
                     <li>Over twenty world-class speakers</li>
                     <li>One full day of workshops and two full days of presentations</li>
@@ -54,11 +53,34 @@
                     <li>August in Chicago is simply amazing</li>
                 </ul>
             </div>
-            <form action="#">
+            <form action="#" method="post">
+                <div>
+                    <h4>Name</h4>
+                    <input type="text" placeholder="Full name" class="input_form">
+                </div>
+                <div>
+                    <h4>Email</h4>
+                    <input type="email" placeholder="Email address" class="input_form">
+                </div>
 
-
+                <div>
+                    <h4>Number of passes</h4>
+                    <select name="number" class="select_form"> 
+                       <option value="1">1</option>
+                       <option value="2">2</option>
+                       <option value="3">3</option>
+                       <option value="4">4</option>
+                       <option value="5">5</option>
+                   </select>
+                </div>
+                <div>
+                    <h4>Comments</h4>
+                    <textarea name="comments" cols="30" rows="5" class="text_form"></textarea>
+                </div>
+                <div>
+                    <button type="submit"> Purchase</button>
+                </div>
             </form>
-
         </div>
     </div>
 
