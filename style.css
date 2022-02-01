@@ -20,6 +20,9 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+
+/* Containers */
+
 .container,
 .container_small {
     padding-top: 30px;
@@ -28,11 +31,15 @@ body {
     padding: 0 auto;
 }
 
+.container_grid {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: "hrs main";
+    color: #a9b2b9;
+}
+
 
 /* HEADER & NAV*/
-
-
-/* Containers */
 
 .bg-dark {
     background-color: var(--dark);
@@ -145,8 +152,22 @@ a:visited {
 a:hover,
 .title h1:hover,
 h3 a,
-h3 a:visited {
+h4 a,
+h4 a:link,
+h3 a:visited,
+.container_grid h3 a:link,
+.address a:link,
+.container_grid a:visited {
     color: var(--middle);
+}
+
+.speak p a:link,
+.speak p a:visited {
+    color: #888;
+}
+
+.container_grid p a:hover {
+    color: #a9b2b9;
 }
 
 h3 a:hover {
@@ -269,6 +290,80 @@ aside ul {
 aside a,
 aside a:visited {
     color: var(--middle);
+}
+
+
+/* SCHEDULE */
+
+.aside {
+    grid-template-areas: hrs;
+}
+
+.schedule {
+    grid-template-areas: main;
+}
+
+.line {
+    width: 100%;
+    margin: 30px 0;
+    border-bottom: 1px solid rgb(214, 214, 214)
+}
+
+.ids {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.day {
+    margin: 50px 0;
+    padding: 20px 0;
+}
+
+
+/* fonts */
+
+.container_grid h3 {
+    color: var(--middle);
+    font-size: 24px
+}
+
+.container_grid h5,
+.container_grid h4 {
+    font-size: 18px;
+}
+
+.aside h5 {
+    color: #a9b2b9;
+    font-size: 14px;
+}
+
+.container_grid h3,
+.container_grid h5,
+.container_grid h4,
+.container_grid p {
+    margin-top: 0;
+}
+
+
+/* VENUE */
+
+.map_link {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 20%;
+}
+
+.address,
+.map_link {
+    margin: 40px 0;
+}
+
+
+/* REGISTER */
+
+.register_grid {
+    display: grid;
+    grid-template-columns: 60% 40%;
 }
 
 
