@@ -9,6 +9,7 @@
 }
 
 *,
+html,
  ::before,
  ::after {
     box-sizing: border-box;
@@ -16,7 +17,9 @@
     padding: 0;
 }
 
-body {
+body,
+html {
+    max-width: 100%;
     font-family: "Lato", sans-serif;
 }
 
@@ -26,7 +29,7 @@ body {
 .container,
 .container_small {
     padding-top: 30px;
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 0 auto;
 }
@@ -157,7 +160,9 @@ h4 a:link,
 h3 a:visited,
 .container_grid h3 a:link,
 .address a:link,
-.container_grid a:visited {
+.container_grid a:visited,
+.register_grid a:link,
+.register_grid a:visited {
     color: var(--middle);
 }
 
@@ -365,13 +370,28 @@ aside a:visited {
 .register_grid {
     display: grid;
     grid-template-columns: 60% 40%;
+    line-height: 1.5;
 }
 
-.propose h2,
-.propose h4,
-form h4 {
+.propose h2 {
     color: var(--middle);
     padding-top: 20px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.propose h5 {
+    padding: 0;
+    color: var(--light);
+    opacity: .7;
+    margin: 0;
+}
+
+.propose h4 {
+    color: var(--middle);
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .propose ul {
@@ -385,22 +405,55 @@ form {
     margin-left: 20px;
     margin-bottom: 22px;
     padding-right: 20px;
-    background-color: violet;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+    /* margin: 5px 0 27px 0; */
+}
+
+.input_form {
+    height: 30px;
+    font-size: 16px;
+    font-family: "Lato";
+    font-weight: 300;
 }
 
 .input_form,
-.text_form {
+.text_form,
+.select_form {
     width: 100%;
     border: 1px solid #c6c9cc;
     border-radius: 5px;
     color: #888;
     display: block;
-    padding: 5px 8px;
+    /* padding: 5px 8px; */
+}
+
+.input_form,
+.text_form,
+.select_form {
+    margin-top: 5px;
+    margin-bottom: 20px;
 }
 
 .select_form {
     width: 60px;
     height: 34px;
+}
+
+.purchase_btn {
+    display: inline-block;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    background-color: var(--middle);
+    padding: 11px 30px;
+    cursor: pointer;
+}
+
+.purchase_btn:hover {
+    opacity: 0.8;
 }
 
 
@@ -416,4 +469,30 @@ form {
     margin-top: -20px;
     font-weight: 300;
     font-size: 15px;
+}
+
+@media(max-width:800px) {
+    .container_grid {
+        column-gap: 10px;
+    }
+    /* HEADER & NAV*/
+    .flex,
+    .flex_centered,
+    .flex_info {
+        padding-top: 10px;
+        flex-wrap: wrap;
+        height: 30%;
+    }
+    .intro img {
+        width: 40%;
+        padding: 20px 0;
+    }
+    /* fonts */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-size: 20px;
+    }
 }
