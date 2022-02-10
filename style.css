@@ -31,7 +31,6 @@ html {
     padding-top: 30px;
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 auto;
 }
 
 .container_grid {
@@ -154,7 +153,7 @@ a:visited {
 
 a:hover,
 .title h1:hover,
-h3 a,
+h3 a:link,
 h4 a,
 h4 a:link,
 h3 a:visited,
@@ -221,7 +220,7 @@ h3 a:hover {
 }
 
 .last {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .img {
@@ -301,11 +300,11 @@ aside a:visited {
 /* SCHEDULE */
 
 .aside {
-    grid-template-areas: hrs;
+    grid-template-areas: "hrs";
 }
 
 .schedule {
-    grid-template-areas: main;
+    grid-template-areas: "main";
 }
 
 .line {
@@ -371,6 +370,7 @@ aside a:visited {
     display: grid;
     grid-template-columns: 60% 40%;
     line-height: 1.5;
+    padding: 10px 15px;
 }
 
 .propose h2 {
@@ -405,7 +405,6 @@ form {
     margin-left: 20px;
     margin-bottom: 22px;
     padding-right: 20px;
-    padding: 10px;
     margin-top: 20px;
     font-size: 18px;
     /* margin: 5px 0 27px 0; */
@@ -414,7 +413,7 @@ form {
 .input_form {
     height: 30px;
     font-size: 16px;
-    font-family: "Lato";
+    /*font-family: "Lato";*/
     font-weight: 300;
 }
 
@@ -475,6 +474,7 @@ form {
     .container_grid {
         column-gap: 10px;
     }
+
     /* HEADER & NAV*/
     .flex,
     .flex_centered,
@@ -483,10 +483,12 @@ form {
         flex-wrap: wrap;
         height: 30%;
     }
+
     .intro img {
         width: 40%;
         padding: 20px 0;
     }
+
     /* fonts */
     h1,
     h2,
@@ -495,4 +497,25 @@ form {
     h5 {
         font-size: 20px;
     }
+
+    /*SPEAKERS*/
+    .aside_l {
+        max-width: 150px;
+        flex: 0 0 150;
+    }
+
+    /*        .aside_r{*/
+    /*padding-left: 50%;*/
+    /*            top: -50px;*/
+    /*    }*/
+
+    .register_grid{
+grid-template-columns: 100%;
+    grid-template-rows: auto auto; }
+
 }
+@media screen and (max-width: 600px )
+  {
+
+
+    }
