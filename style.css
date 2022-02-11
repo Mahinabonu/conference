@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
 :root {
     --dark: #293f50;
     --light: #888;
@@ -10,8 +11,8 @@
 
 *,
 html,
- ::before,
- ::after {
+::before,
+::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -190,7 +191,7 @@ h3 a:hover {
     margin: 20px;
     border-radius: 5px;
     font-weight: 400;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
 }
 
 .button a:hover {
@@ -470,9 +471,27 @@ form {
     font-size: 15px;
 }
 
-@media(max-width:800px) {
+@media (max-width: 800px) {
     .container_grid {
         column-gap: 10px;
+    }
+
+    .register_grid {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+    }
+
+    .day {
+        /*padding-left: 20px;*/
+        margin-left: 10%;
+    }
+
+    .day .container_grid, .ids {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
     /* HEADER & NAV*/
@@ -489,6 +508,13 @@ form {
         padding: 20px 0;
     }
 
+    .nav h2 {
+        font-size: 15px;
+        text-align: left;
+        padding-top: 15px;
+    }
+
+
     /* fonts */
     h1,
     h2,
@@ -499,23 +525,16 @@ form {
     }
 
     /*SPEAKERS*/
-    .aside_l {
-        max-width: 150px;
-        flex: 0 0 150;
+    aside .speaker {
+        display: none;
+
+
     }
-
-    /*        .aside_r{*/
-    /*padding-left: 50%;*/
-    /*            top: -50px;*/
-    /*    }*/
-
-    .register_grid{
-grid-template-columns: 100%;
-    grid-template-rows: auto auto; }
 
 }
-@media screen and (max-width: 600px )
-  {
 
-
+@media screen and (max-width: 460px) {
+    header li{
+        font-size: 10px;
     }
+}
