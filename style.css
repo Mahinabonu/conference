@@ -364,7 +364,6 @@ aside a:visited {
     margin: 40px 0;
 }
 
-
 /* REGISTER */
 
 .register_grid {
@@ -472,8 +471,9 @@ form {
 }
 
 @media (max-width: 800px) {
-    .container_grid {
-        column-gap: 10px;
+       .container_grid {
+        display: flex;
+        flex-direction: column;
     }
 
     .register_grid {
@@ -508,6 +508,17 @@ form {
         padding: 20px 0;
     }
 
+    .intro_a {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .intro_b {
+        padding: 5px 10px;
+        margin-top: -50px;
+    }
+
     .nav h2 {
         font-size: 15px;
         text-align: left;
@@ -527,14 +538,110 @@ form {
     /*SPEAKERS*/
     aside .speaker {
         display: none;
-
-
     }
 
+/*VENUE*/
+    .address{
+        text-align: center;
+    }
+    .address,
+    .map_link {
+        padding-left: 20px;
+    }
 }
 
 @media screen and (max-width: 460px) {
-    header li{
+    header li {
         font-size: 10px;
+    }
+
+    /*MENU BTN*/
+    .menu-btn {
+        display: flex;
+        justify-content: flex-end;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+    }
+
+    .menu-btn span {
+        width: 30px;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        transition: all 0.5s;
+    }
+
+    .menu-btn span:nth-of-type(2) {
+        top: calc(50% - 5px);
+    }
+
+    .menu-btn span:nth-of-type(3) {
+        top: calc(50% + 5px);
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        background: #FFEFBA;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+    }
+
+    .menu.active {
+        transform: translateX(0);
+            }
+
+    /* Меняем гамбургер иконку, когда меню открыто */
+    .menu-btn.active span:nth-of-type(1) {
+        display: none;
+    }
+
+    .menu-btn.active span:nth-of-type(2) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(45deg);
+    }
+
+    .menu-btn.active span:nth-of-type(3) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(-45deg);
+    }
+.menu{
+    background: transparent;
+    width: fit-content;
+    height: auto;
+
+}
+    .menu_list{
+        background-color: var(--dark);
+        display: block;
+            }
+
+    .menu_list li{
+        padding-top: 10px;
+    }
+    .intro img {
+        width: 80%;
+
+        padding: 20px 0;
+    }
+    .intro_a {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .intro_b {
+        padding: 5px 10px;
+        margin-top: -50px;
     }
 }
