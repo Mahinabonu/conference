@@ -557,6 +557,7 @@ form {
 
     /*MENU BTN*/
     .menu-btn {
+
         display: flex;
         justify-content: flex-end;
         width: 30px;
@@ -628,6 +629,11 @@ form {
 
     .menu_list li{
         padding-top: 10px;
+            }
+
+    .menu_list li:first-child{
+        padding-top:0;
+        margin-top: -5px;
     }
     .intro img {
         width: 80%;
